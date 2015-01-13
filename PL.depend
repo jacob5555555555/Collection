@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1421183984 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
+	<iostream>
+	<ArrayPiece.h>
+	<stdlib.h>
+
+1421184099 /home/jacob/Desktop/simple-pl/PL/include/ArrayPiece.h
+	<string.h>
+
