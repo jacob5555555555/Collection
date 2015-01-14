@@ -1,9 +1,28 @@
 # depslib dependency file v1.0
-1421183984 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
+1421194982 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
 	<iostream>
 	<ArrayPiece.h>
 	<stdlib.h>
+	<string>
+	<Tokenizer.h>
 
 1421184099 /home/jacob/Desktop/simple-pl/PL/include/ArrayPiece.h
 	<string.h>
+
+1421187013 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
+	"Object.h"
+
+1421190875 /home/jacob/Desktop/simple-pl/PL/include/Object.h
+	<vector>
+	<memory>
+
+1421195329 source:/home/jacob/Desktop/simple-pl/PL/src/Tokenizer.cpp
+	"Tokenizer.h"
+	<iostream>
+	<string>
+
+1421195233 /home/jacob/Desktop/simple-pl/PL/include/Tokenizer.h
+	<unordered_map>
+	<istream>
+	<string>
 

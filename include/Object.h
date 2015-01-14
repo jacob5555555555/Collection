@@ -16,9 +16,4 @@ class Object
 
 };
 
-template <typename T>
-class BuiltinObject<T> : public Object{
-
-};
-
 #endif // OBJECT_H
