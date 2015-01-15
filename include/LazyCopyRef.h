@@ -13,30 +13,56 @@ class LazyCopyRef
             data = new ValAndCount(params...);
             data->count = 1;
         }
+
+        //copy constructors
         LazyCopyRef(LazyCopyRef<T>& other): data(other.data){
+            data->count += 1;
+        }
+        LazyCopyRef(const LazyCopyRef<T>& other): data(other.data){
             data->count += 1;
         }
         LazyCopyRef(LazyCopyRef<T>&& other): data(nullptr){
             swap(other);
         }
+        LazyCopyRef(const LazyCopyRef<T>&& other): data(nullptr){
+            swap(other);
+        }
+
+        //assignment
         LazyCopyRef<T> operator=(LazyCopyRef<T> other){
             swap(other);
         }
+
+        //comparison
+        bool operator==(const LazyCopyRef<T>& other) const{
+            return other.data->val == data->val;
+        }
+
+        //destructor
         ~LazyCopyRef(){
             data->count -= 1;
             if (data != nullptr && data->count == 0){
                 delete data;
             }
         }
-        const T& getRO(){
+
+        //get read-only reference to data
+        const T& getRO() const{
             return data->val;
         }
+
+        //makes copy of data if this isn't the only LazyCopyRef<T> pointing to it, then returns reference
         T& get(){
             if(data->count != 1){
                 deepCopy();
             }
             return data->val;
         }
+        //swaps with another LazyCopyRef<T>
+        void swap(LazyCopyRef<T> other){
+            std::swap(data, other.data);
+        }
+    private:
         void deepCopy(){
             if(data->count != 1){
                 data->count -= 1;
@@ -45,10 +71,6 @@ class LazyCopyRef
                 data->count = 1;
             }
         }
-        void swap(LazyCopyRef<T> other){
-            std::swap(data, other.data);
-        }
-    private:
         struct ValAndCount{
             template <typename ...Args>
             ValAndCount(Args&& ...params):

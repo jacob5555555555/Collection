@@ -3,12 +3,13 @@
 
 #include <vector>
 #include <LazyCopyRef.h>
-#include <unordered_set>
-
-typedef size_t Hash;
+#include <unordered_map>
 
 class Object;
 
+typedef size_t Hash;
+
+typedef LazyCopyRef<Object> ObjRef;
 
 class Object
 {
@@ -16,11 +17,11 @@ class Object
         Object();
         virtual ~Object();
         virtual Hash hash() const;
+        virtual bool operator==(const Object& other) const;
     protected:
-    private:
-        std::unordered_set<LazyCopyRef<Object>> objects;
+        std::unordered_map<ObjRef, ObjRef> objects;
         Hash mHash;
-
+    private:
 };
 
 namespace std{
