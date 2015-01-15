@@ -15,6 +15,7 @@
 					<Add option="-std=c++11" />
 					<Add option="-g" />
 					<Add directory="include" />
+					<Add directory="/usr/include/" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -25,7 +26,9 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-std=c++11" />
+					<Add option="-fno-exceptions" />
 					<Add directory="include" />
+					<Add directory="/usr/include/" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,8 +39,12 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include/ArrayPiece.h" />
+		<Unit filename="include/LazyCopyRef.h" />
 		<Unit filename="include/Object.h" />
+		<Unit filename="include/Tokenizer.h" />
+		<Unit filename="src/LazyCopyRef.cpp" />
 		<Unit filename="src/Object.cpp" />
+		<Unit filename="src/Tokenizer.cpp" />
 		<Unit filename="test.cpp" />
 		<Extensions>
 			<code_completion />
