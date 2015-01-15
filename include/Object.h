@@ -2,18 +2,34 @@
 #define OBJECT_H
 
 #include <vector>
-#include <memory>
+#include <LazyCopyRef.h>
+#include <unordered_set>
+
+typedef size_t Hash;
+
+class Object;
+
 
 class Object
 {
     public:
         Object();
         virtual ~Object();
+        virtual Hash hash() const;
     protected:
     private:
-        std::vector<std::shared_ptr<Object>> objects;
-        int hash;
+        std::unordered_set<LazyCopyRef<Object>> objects;
+        Hash mHash;
 
 };
+
+namespace std{
+template<>
+struct hash<Object>{
+    size_t operator()(const Object& k) const{
+        return k.hash();
+    }
+};
+}
 
 #endif // OBJECT_H
