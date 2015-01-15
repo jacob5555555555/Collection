@@ -41,6 +41,7 @@
 		<Unit filename="include/ArrayPiece.h" />
 		<Unit filename="include/LazyCopyRef.h" />
 		<Unit filename="include/Object.h" />
+		<Unit filename="include/SpecificObject.h" />
 		<Unit filename="include/Tokenizer.h" />
 		<Unit filename="src/LazyCopyRef.cpp" />
 		<Unit filename="src/Object.cpp" />

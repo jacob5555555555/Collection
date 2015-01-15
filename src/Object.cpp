@@ -2,11 +2,11 @@
 
 using namespace std;
 
-static Hash orderedHash(Hash a, Hash b){
+Hash orderedHash(Hash a, Hash b){
     return b ^ (b >> (a % 4));
 }
 
-static inline Hash unorderedHash(Hash a, Hash b){
+inline Hash unorderedHash(Hash a, Hash b){
     return a ^ b;
 }
 
@@ -37,4 +37,22 @@ bool Object::operator==(const Object& other) const{
     }
     */
     return objects == other.objects;
+}
+
+std::string Object::toString() const{
+    string ret = "{";
+    for (const auto& obj : objects){
+        ret += obj.first.getRO().toString();
+        ret += ": ";
+        ret += obj.second.getRO().toString();
+        ret += ", ";
+    }
+    ret += "}";
+    return ret;
+}
+ObjRef Object::get(ObjRef key){
+    return objects[key];
+}
+void Object::add(ObjRef key, ObjRef val){
+    objects[key] = val;
 }
