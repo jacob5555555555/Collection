@@ -1,9 +1,7 @@
 # depslib dependency file v1.0
-<<<<<<< HEAD
+18816928 <<<<<<< HEAD
+
 1421374615 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
-=======
-1421374247 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
->>>>>>> a5b8cc74f11051cd9647a8511bfbbba436a612e1
 	<iostream>
 	<ArrayPiece.h>
 	<stdlib.h>
@@ -13,16 +11,25 @@
 	<SpecificObject.h>
 	<Object.h>
 
+1421372869 8cc74f11051cd9647a8511bfbbba436a612e1
+	<iostream>
+	<ArrayPiece.h>
+	<stdlib.h>
+	<string>
+	<Tokenizer.h>
+	<LazyCopyRef.h>
+	<SpecificObject.h>
+	<Object.h>
+	"Object.h"
+	<iostream>
+
 1421184099 /home/jacob/Desktop/simple-pl/PL/include/ArrayPiece.h
 	<string.h>
 
-<<<<<<< HEAD
+1421184099 D
+
 1421374276 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
-=======
-1421372869 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
->>>>>>> a5b8cc74f11051cd9647a8511bfbbba436a612e1
 	"Object.h"
-	<iostream>
 
 1421355404 /home/jacob/Desktop/simple-pl/PL/include/Object.h
 	<vector>
@@ -2978,7 +2985,7 @@
 1421292534 source:/home/jacob/Desktop/simple-pl/PL/src/LazyCopyRef.cpp
 	"LazyCopyRef.h"
 
-1421373003 /home/jacob/Desktop/simple-pl/PL/include/LazyCopyRef.h
+1421381562 /home/jacob/Desktop/simple-pl/PL/include/LazyCopyRef.h
 	<utility>
 	<iostream>
 	<memory>
@@ -2987,4 +2994,125 @@
 	<Object.h>
 	<sstream>
 	<typeinfo>
+
+1421381368 source:/home/jacob/Desktop/simple-pl/PL/src/unittest.cpp
+	<unittest++/UnitTest++.h>
+	<Tokenizer.h>
+	<LazyCopyRef.h>
+	<SpecificObject.h>
+	<Object.h>
+	<string>
+
+1249328246 /usr/include//unittest++/UnitTest++.h
+	"Config.h"
+	"Test.h"
+	"TestList.h"
+	"TestSuite.h"
+	"TestResults.h"
+	"TestMacros.h"
+	"CheckMacros.h"
+	"TestRunner.h"
+	"TimeConstraint.h"
+
+1249328246 /usr/include//unittest++/Config.h
+
+1249328246 /usr/include//unittest++/Test.h
+	"TestDetails.h"
+
+1249328246 /usr/include//unittest++/TestDetails.h
+
+1249328246 /usr/include//unittest++/TestList.h
+
+1249328246 /usr/include//unittest++/TestSuite.h
+
+1249328246 /usr/include//unittest++/TestResults.h
+
+1249328246 /usr/include//unittest++/TestMacros.h
+	"Config.h"
+	"ExecuteTest.h"
+	"AssertException.h"
+	"TestDetails.h"
+	"MemoryOutStream.h"
+	"Posix/SignalTranslator.h"
+
+1249328246 /usr/include//unittest++/ExecuteTest.h
+	"TestDetails.h"
+	"MemoryOutStream.h"
+	"AssertException.h"
+	"CurrentTest.h"
+	"Posix/SignalTranslator.h"
+
+1249328246 /usr/include//unittest++/MemoryOutStream.h
+	"Config.h"
+	<sstream>
+	<cstddef>
+
+1249328246 /usr/include//unittest++/AssertException.h
+	<exception>
+
+1249328246 /usr/include//unittest++/CurrentTest.h
+
+1249328246 /usr/include//unittest++/Posix/SignalTranslator.h
+	<setjmp.h>
+	<signal.h>
+
+1417462914 /usr/include//setjmp.h
+	<features.h>
+	<bits/setjmp.h>
+	<bits/sigset.h>
+	<bits/setjmp2.h>
+
+1417462914 /usr/include//signal.h
+	<features.h>
+	<bits/sigset.h>
+	<bits/types.h>
+	<bits/signum.h>
+	<time.h>
+	<bits/siginfo.h>
+	<bits/sigaction.h>
+	<bits/sigcontext.h>
+	<stddef.h>
+	<bits/sigstack.h>
+	<sys/ucontext.h>
+	<bits/pthreadtypes.h>
+	<bits/sigthread.h>
+
+1417462919 /usr/include//time.h
+	<features.h>
+	<stddef.h>
+	<bits/time.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<xlocale.h>
+
+1249328246 /usr/include//unittest++/CheckMacros.h
+	"Checks.h"
+	"AssertException.h"
+	"MemoryOutStream.h"
+	"TestDetails.h"
+	"CurrentTest.h"
+
+1249328246 /usr/include//unittest++/Checks.h
+	"Config.h"
+	"TestResults.h"
+	"MemoryOutStream.h"
+
+1249328246 /usr/include//unittest++/TestRunner.h
+	"Test.h"
+	"TestList.h"
+	"CurrentTest.h"
+
+1249328246 /usr/include//unittest++/TimeConstraint.h
+	"TimeHelpers.h"
+
+1249328246 /usr/include//unittest++/TimeHelpers.h
+	"Config.h"
+	"Posix/TimeHelpers.h"
+	"Win32/TimeHelpers.h"
+
+1249328246 /usr/include//unittest++/Posix/TimeHelpers.h
+	<sys/time.h>
 
