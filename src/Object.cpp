@@ -47,12 +47,14 @@ std::string Object::toString() const{
         ret += obj.second.getRO().toString();
         ret += ", ";
     }
+    ret.pop_back();
+    ret.pop_back();//remove last ", "
     ret += "}";
     return ret;
 }
 ObjRef Object::get(ObjRef key){
-    return objects[key];
+    return objects.at(key);
 }
 void Object::add(ObjRef key, ObjRef val){
-    objects[key] = val;
+    objects.insert(make_pair(key, val));
 }
