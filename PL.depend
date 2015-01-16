@@ -1,5 +1,9 @@
 # depslib dependency file v1.0
+<<<<<<< HEAD
 1421374615 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
+=======
+1421374247 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
+>>>>>>> a5b8cc74f11051cd9647a8511bfbbba436a612e1
 	<iostream>
 	<ArrayPiece.h>
 	<stdlib.h>
@@ -12,8 +16,13 @@
 1421184099 /home/jacob/Desktop/simple-pl/PL/include/ArrayPiece.h
 	<string.h>
 
+<<<<<<< HEAD
 1421374276 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
+=======
+1421372869 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
+>>>>>>> a5b8cc74f11051cd9647a8511bfbbba436a612e1
 	"Object.h"
+	<iostream>
 
 1421355404 /home/jacob/Desktop/simple-pl/PL/include/Object.h
 	<vector>
