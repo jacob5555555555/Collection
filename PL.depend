@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1421355458 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
+1421374247 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
 	<iostream>
 	<ArrayPiece.h>
 	<stdlib.h>
@@ -12,8 +12,9 @@
 1421184099 /home/jacob/Desktop/simple-pl/PL/include/ArrayPiece.h
 	<string.h>
 
-1421355413 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
+1421372869 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
 	"Object.h"
+	<iostream>
 
 1421355404 /home/jacob/Desktop/simple-pl/PL/include/Object.h
 	<vector>
@@ -2969,11 +2970,13 @@
 1421292534 source:/home/jacob/Desktop/simple-pl/PL/src/LazyCopyRef.cpp
 	"LazyCopyRef.h"
 
-1421352940 /home/jacob/Desktop/simple-pl/PL/include/LazyCopyRef.h
+1421373003 /home/jacob/Desktop/simple-pl/PL/include/LazyCopyRef.h
 	<utility>
 	<iostream>
+	<memory>
 
-1421355496 /home/jacob/Desktop/simple-pl/PL/include/SpecificObject.h
+1421374239 /home/jacob/Desktop/simple-pl/PL/include/SpecificObject.h
 	<Object.h>
 	<sstream>
+	<typeinfo>
 

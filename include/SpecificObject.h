@@ -3,6 +3,7 @@
 
 #include <Object.h>
 #include <sstream>
+#include <typeinfo>
 
 template<typename T>
 class SpecificObject : public Object
@@ -21,6 +22,14 @@ class SpecificObject : public Object
             ss >> ret;
             return ret;
         }
+    virtual bool operator==(const Object& other) const{
+        const SpecificObject<T>* specOther = dynamic_cast<const SpecificObject<T>*>(&other);
+        if(specOther == nullptr){
+            return false;
+        }else{
+            return mVal == specOther->mVal;
+        }
+    }
     protected:
         T mVal;
     private:
