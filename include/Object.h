@@ -14,7 +14,7 @@ class Object
 {
     public:
         Object();
-        virtual Hash hash() const;
+        Hash hash() const;
         virtual std::string toString() const = 0;
         virtual bool operator==(const Object& other) const = 0;
         virtual ~Object();

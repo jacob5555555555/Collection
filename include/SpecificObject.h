@@ -10,11 +10,9 @@ class SpecificObject : public Object
 {
     public:
         SpecificObject(T val): mVal(val){
+            mHash = std::hash<T>()(val);
         }
         virtual ~SpecificObject(){}
-        virtual Hash hash() const{
-            return orderedHash(std::hash<T>()(mVal), UserDefinedObject::hash());
-        }
         virtual std::string toString() const{
             std::string ret;
             std::stringstream ss;

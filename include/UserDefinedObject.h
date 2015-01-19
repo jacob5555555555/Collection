@@ -8,18 +8,16 @@
 
 class UserDefinedObject;
 
-class UserDefinedObject : Object
+class UserDefinedObject : public Object
 {
     public:
-        UserDefinedObject();
+        UserDefinedObject(std::unordered_map<ObjRef, ObjRef> objects);
         virtual ~UserDefinedObject();
-        virtual Hash hash() const;
         virtual bool operator==(const Object& other) const;
         virtual std::string toString() const;
         virtual ObjRef get(ObjRef key) const;
-        virtual void add(ObjRef key, ObjRef val);
     protected:
-        std::unordered_map<ObjRef, ObjRef> objects;
+        std::unordered_map<ObjRef, ObjRef> mObjects;
     private:
 };
 

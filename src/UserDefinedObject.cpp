@@ -14,20 +14,21 @@ static inline Hash removeUnorderedHash(Hash keep, Hash remove){
     return keep ^ remove;
 }
 
-UserDefinedObject::UserDefinedObject(){
+#define EMPTY_OBJECT_HASH 0xAC975FF0
+
+UserDefinedObject::UserDefinedObject(std::unordered_map<ObjRef, ObjRef> objects):
+    mObjects(objects)
+{
+    std::hash<ObjRef> hasher;
+    Hash hashSoFar = EMPTY_OBJECT_HASH;
+    for (const auto& obj : mObjects){
+        hashSoFar = unorderedHash(hashSoFar, orderedHash(hasher(obj.first), hasher(obj.second)));
+    }
+    mHash = hashSoFar;
+
 }
 
 UserDefinedObject::~UserDefinedObject(){
-}
-
-#define EMPTY_OBJECT_HASH 0xA987CC0
-Hash UserDefinedObject::hash() const{
-    std::hash<ObjRef> hasher;
-    Hash hashSoFar = EMPTY_OBJECT_HASH;
-    for (const auto& obj : objects){
-        hashSoFar = unorderedHash(hashSoFar, orderedHash(hasher(obj.first), hasher(obj.second)));
-    }
-    return hashSoFar;
 }
 
 bool UserDefinedObject::operator==(const Object& other) const{
@@ -35,13 +36,13 @@ bool UserDefinedObject::operator==(const Object& other) const{
     if(usDefOther == nullptr){
         return false;
     }else{
-        return objects == usDefOther->objects;
+        return mObjects == usDefOther->mObjects;
     }
 }
 
 std::string UserDefinedObject::toString() const{
     string ret = "{";
-    for (const auto& obj : objects){
+    for (const auto& obj : mObjects){
         ret += obj.first.getRO().toString();
         ret += ": ";
         ret += obj.second.getRO().toString();
@@ -53,8 +54,5 @@ std::string UserDefinedObject::toString() const{
     return ret;
 }
 ObjRef UserDefinedObject::get(ObjRef key) const{
-    return objects.at(key);
-}
-void UserDefinedObject::add(ObjRef key, ObjRef val){
-    objects.insert(make_pair(key, val));
+    return mObjects.at(key);
 }

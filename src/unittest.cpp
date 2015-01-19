@@ -41,6 +41,20 @@ SUITE(LazyCopyRef){
     }
 }
 
+SUITE(Hashing){
+    TEST(HashIsConsistent){
+        ObjRef ref1(new UserDefinedObject(std::unordered_map<ObjRef, ObjRef>({
+                                            {ObjRef(new SpecificObject<int>(143)), ObjRef(new SpecificObject<string>("beach"))},
+                                            {ObjRef(new SpecificObject<float>(534.1)), ObjRef(new SpecificObject<long>(9876))}
+                                          })));
+        ObjRef ref2(new UserDefinedObject({
+                                            {ObjRef(new SpecificObject<float>(534.1)), ObjRef(new SpecificObject<long>(9876))},
+                                            {ObjRef(new SpecificObject<int>(143)), ObjRef(new SpecificObject<string>("beach"))}
+                                          }));
+        CHECK(ref1.getRO().hash() == ref2.getRO().hash());
+    }
+}
+
 int main(){
     return UnitTest::RunAllTests();
 }
