@@ -52,6 +52,20 @@ SUITE(Hashing){
                                             {ObjRef(new SpecificObject<int>(143)), ObjRef(new SpecificObject<string>("beach"))}
                                           }));
         CHECK(ref1.getRO().hash() == ref2.getRO().hash());
+
+        ObjRef ref3(new UserDefinedObject({
+                                            {ObjRef(new SpecificObject<float>(2134.1234)), ObjRef(new SpecificObject<long>(1000000000))},
+                                            {ObjRef(new SpecificObject<char>('c')), ObjRef(new SpecificObject<string>("beach"))},
+                                            {ObjRef(new SpecificObject<string>("ketchup")), ref1},
+                                            {ref2, ObjRef(new SpecificObject<double>(19.1))}
+                                          }));
+        ObjRef ref4(new UserDefinedObject({
+                                            {ref2, ObjRef(new SpecificObject<double>(19.1))},
+                                            {ObjRef(new SpecificObject<char>('c')), ObjRef(new SpecificObject<string>("beach"))},
+                                            {ObjRef(new SpecificObject<string>("ketchup")), ref1},
+                                            {ObjRef(new SpecificObject<float>(2134.1234)), ObjRef(new SpecificObject<long>(1000000000))},
+                                          }));
+        CHECK(ref3.getRO().hash() == ref4.getRO().hash());
     }
 }
 

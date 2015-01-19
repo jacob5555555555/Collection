@@ -1,7 +1,8 @@
 #ifndef SPECIFICOBJECT_H
 #define SPECIFICOBJECT_H
 
-#include <UserDefinedObject.h>
+#include <Object.h>
+#include <NoneObject.h>
 #include <sstream>
 #include <typeinfo>
 
@@ -20,6 +21,9 @@ class SpecificObject : public Object
             ss >> ret;
             return ret;
         }
+    virtual ObjRef get(ObjRef key) const{
+        return ObjRef(new NoneObject);
+    }
     virtual bool operator==(const Object& other) const{
         const SpecificObject<T>* specOther = dynamic_cast<const SpecificObject<T>*>(&other);
         if(specOther == nullptr){

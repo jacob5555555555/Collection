@@ -32,6 +32,9 @@ UserDefinedObject::~UserDefinedObject(){
 }
 
 bool UserDefinedObject::operator==(const Object& other) const{
+    if (hash() != other.hash()){
+        return false;
+    }
     const UserDefinedObject* usDefOther = dynamic_cast<const UserDefinedObject*>(&other);
     if(usDefOther == nullptr){
         return false;
