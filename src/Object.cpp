@@ -8,6 +8,14 @@ Hash Object::hash() const{
     return mHash;
 }
 
+bool Object::operator==(const Object& other) const{
+    if (hash() != other.hash()){
+        return false;
+    } else {
+        return compare(other);
+    }
+}
+
 bool Object::operator!=(const Object& other) const{
     return !operator==(other);
 }

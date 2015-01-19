@@ -13,7 +13,7 @@ class UserDefinedObject : public Object
     public:
         UserDefinedObject(std::unordered_map<ObjRef, ObjRef> objects);
         virtual ~UserDefinedObject();
-        virtual bool operator==(const Object& other) const;
+        virtual bool compare(const Object& other) const;
         virtual std::string toString() const;
         virtual ObjRef get(ObjRef key) const;
     protected:

@@ -11,10 +11,7 @@ NoneObject::NoneObject()
 string NoneObject::toString() const{
     return "None";
 }
-bool NoneObject::operator==(const Object& other) const{
-    if(hash() != other.hash()){
-        return false;
-    }
+bool NoneObject::compare(const Object& other) const{
     const NoneObject* noneOther = dynamic_cast<const NoneObject*>(&other);
     if(noneOther == nullptr){
         return false;

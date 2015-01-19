@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 18816928 <<<<<<< HEAD
 
-1421374615 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
+1421632210 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
 	<iostream>
 	<ArrayPiece.h>
 	<stdlib.h>
@@ -9,7 +9,7 @@
 	<Tokenizer.h>
 	<LazyCopyRef.h>
 	<SpecificObject.h>
-	<Object.h>
+	<UserDefinedObject.h>
 
 1421372869 8cc74f11051cd9647a8511bfbbba436a612e1
 	<iostream>
@@ -28,10 +28,10 @@
 
 1421184099 D
 
-1421635587 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
+1421636755 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
 	"Object.h"
 
-1421635485 /home/jacob/Desktop/simple-pl/PL/include/Object.h
+1421636747 /home/jacob/Desktop/simple-pl/PL/include/Object.h
 	<cstddef>
 	<LazyCopyRef.h>
 	<string>
@@ -2985,12 +2985,12 @@
 1421292534 source:/home/jacob/Desktop/simple-pl/PL/src/LazyCopyRef.cpp
 	"LazyCopyRef.h"
 
-1421635581 /home/jacob/Desktop/simple-pl/PL/include/LazyCopyRef.h
+1421637447 /home/jacob/Desktop/simple-pl/PL/include/LazyCopyRef.h
 	<utility>
 	<iostream>
 	<memory>
 
-1421633495 /home/jacob/Desktop/simple-pl/PL/include/SpecificObject.h
+1421636701 /home/jacob/Desktop/simple-pl/PL/include/SpecificObject.h
 	<Object.h>
 	<NoneObject.h>
 	<sstream>
@@ -3117,19 +3117,26 @@
 1249328246 /usr/include//unittest++/Posix/TimeHelpers.h
 	<sys/time.h>
 
-1421631469 /home/jacob/Desktop/simple-pl/PL/include/UserDefinedObject.h
+1421636664 /home/jacob/Desktop/simple-pl/PL/include/UserDefinedObject.h
 	<vector>
 	<LazyCopyRef.h>
 	<unordered_map>
 	<Object.h>
 
-1421632089 source:/home/jacob/Desktop/simple-pl/PL/src/UserDefinedObject.cpp
+1421636890 source:/home/jacob/Desktop/simple-pl/PL/src/UserDefinedObject.cpp
 	"UserDefinedObject.h"
 
-1421633086 source:/home/jacob/Desktop/simple-pl/PL/src/NoneObject.cpp
+1421636898 source:/home/jacob/Desktop/simple-pl/PL/src/NoneObject.cpp
 	"NoneObject.h"
 	<type_traits>
 
-1421632622 /home/jacob/Desktop/simple-pl/PL/include/NoneObject.h
+1421636681 /home/jacob/Desktop/simple-pl/PL/include/NoneObject.h
+	<Object.h>
+
+1421637400 source:/home/jacob/Desktop/simple-pl/PL/src/SymbolObject.cpp
+	"SymbolObject.h"
+	<NoneObject.h>
+
+1421637263 /home/jacob/Desktop/simple-pl/PL/include/SymbolObject.h
 	<Object.h>
 

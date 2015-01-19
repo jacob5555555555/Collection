@@ -24,7 +24,7 @@ class SpecificObject : public Object
     virtual ObjRef get(ObjRef key) const{
         return ObjRef(new NoneObject);
     }
-    virtual bool operator==(const Object& other) const{
+    virtual bool compare(const Object& other) const{
         const SpecificObject<T>* specOther = dynamic_cast<const SpecificObject<T>*>(&other);
         if(specOther == nullptr){
             return false;

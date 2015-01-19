@@ -31,10 +31,7 @@ UserDefinedObject::UserDefinedObject(std::unordered_map<ObjRef, ObjRef> objects)
 UserDefinedObject::~UserDefinedObject(){
 }
 
-bool UserDefinedObject::operator==(const Object& other) const{
-    if (hash() != other.hash()){
-        return false;
-    }
+bool UserDefinedObject::compare(const Object& other) const{
     const UserDefinedObject* usDefOther = dynamic_cast<const UserDefinedObject*>(&other);
     if(usDefOther == nullptr){
         return false;
