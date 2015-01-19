@@ -1,11 +1,12 @@
 #ifndef OBJECT_H
 #define OBJECT_H
 
-#include <vector>
+#include <cstddef> //size_t
 #include <LazyCopyRef.h>
-#include <unordered_map>
+#include <string>
 
 class Object;
+
 typedef size_t Hash;
 typedef LazyCopyRef<Object> ObjRef;
 
@@ -13,14 +14,11 @@ class Object
 {
     public:
         Object();
-        virtual ~Object();
         virtual Hash hash() const;
-        virtual bool operator==(const Object& other) const;
-        virtual std::string toString() const;
-        virtual ObjRef get(ObjRef key);
-        virtual void add(ObjRef key, ObjRef val);
+        virtual std::string toString() const = 0;
+        virtual bool operator==(const Object& other) const = 0;
+        virtual ~Object();
     protected:
-        std::unordered_map<ObjRef, ObjRef> objects;
         Hash mHash;
     private:
 };
@@ -33,8 +31,5 @@ struct hash<Object>{
     }
 };
 }
-
-Hash orderedHash(Hash a, Hash b);
-inline Hash unorderedHash(Hash a, Hash b);
 
 #endif // OBJECT_H

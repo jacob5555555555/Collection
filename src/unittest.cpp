@@ -3,7 +3,7 @@
 #include <Tokenizer.h>
 #include <LazyCopyRef.h>
 #include <SpecificObject.h>
-#include <Object.h>
+#include <UserDefinedObject.h>
 #include <string>
 
 using namespace std;
