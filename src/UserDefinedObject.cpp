@@ -1,18 +1,7 @@
 #include "UserDefinedObject.h"
+#include <Object.h>
 
 using namespace std;
-
-Hash orderedHash(Hash a, Hash b){
-    return b ^ (b >> (a % 4));
-}
-
-inline Hash unorderedHash(Hash a, Hash b){
-    return a ^ b;
-}
-
-static inline Hash removeUnorderedHash(Hash keep, Hash remove){
-    return keep ^ remove;
-}
 
 #define EMPTY_OBJECT_HASH 0xAC975FF0
 

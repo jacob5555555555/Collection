@@ -21,7 +21,4 @@ class UserDefinedObject : public Object
     private:
 };
 
-Hash orderedHash(Hash a, Hash b);
-inline Hash unorderedHash(Hash a, Hash b);
-
 #endif // USER_DEFINED_OBJECT_H

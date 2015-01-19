@@ -8,7 +8,9 @@ template <typename T, ObjRef func(const T& master, const T& key)> //where T is s
 class FunctorObject : public Object{
 public:
     FunctorObject(const T& creator):master(creator)
-    {}
+    {
+        mHash = orderedHash(master.hash(), std::hash<ObjRef (*)(const T& master, const T& key)>()(func));
+    }
     virtual ~FunctorObject(){}
 
     virtual bool compare(const Object& other) const{

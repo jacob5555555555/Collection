@@ -35,4 +35,7 @@ struct hash<Object>{
 };
 }
 
+Hash orderedHash(Hash a, Hash b);
+Hash unorderedHash(Hash a, Hash b);
+
 #endif // OBJECT_H

@@ -10,6 +10,7 @@ using namespace std;
 NumberObject::NumberObject(double num):
     mNum(num)
 {
+    mHash = std::hash<double>()(mNum);
 }
 
 NumberObject::~NumberObject()

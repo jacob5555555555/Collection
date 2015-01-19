@@ -1,5 +1,17 @@
 #include "Object.h"
 
+Hash orderedHash(Hash a, Hash b){
+    return b ^ (b >> (a % 4));
+}
+
+Hash unorderedHash(Hash a, Hash b){
+    return a ^ b;
+}
+
+static inline Hash removeUnorderedHash(Hash keep, Hash remove){
+    return keep ^ remove;
+}
+
 Object::Object()
 {
 }
