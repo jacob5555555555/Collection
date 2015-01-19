@@ -49,19 +49,47 @@
 					<Add option="-lunittest++" />
 				</Linker>
 			</Target>
+			<Target title="TestFullOptimizations">
+				<Option output="bin/Debug/PL" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-fno-exceptions" />
+					<Add directory="include" />
+					<Add directory="/usr/include/" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lunittest++" />
+				</Linker>
+			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include/ArrayPiece.h" />
+		<Unit filename="include/FunctorObject.h" />
 		<Unit filename="include/LazyCopyRef.h" />
+		<Unit filename="include/NoneObject.h" />
+		<Unit filename="include/NumberObject.h" />
 		<Unit filename="include/Object.h" />
 		<Unit filename="include/SpecificObject.h" />
+		<Unit filename="include/SymbolObject.h" />
 		<Unit filename="include/Tokenizer.h" />
+		<Unit filename="include/UserDefinedObject.h" />
+		<Unit filename="src/FunctorObject.cpp" />
+		<Unit filename="src/NoneObject.cpp" />
+		<Unit filename="src/NumberObject.cpp" />
 		<Unit filename="src/Object.cpp" />
+		<Unit filename="src/SymbolObject.cpp" />
 		<Unit filename="src/Tokenizer.cpp" />
+		<Unit filename="src/UserDefinedObject.cpp" />
 		<Unit filename="src/unittest.cpp">
 			<Option target="Test" />
+			<Option target="TestFullOptimizations" />
 		</Unit>
 		<Unit filename="test.cpp">
 			<Option target="Debug" />

@@ -7,6 +7,8 @@
 #include <string>
 #include <SymbolObject.h>
 #include <NumberObject.h>
+#include <FunctorObject.h>
+#include <NoneObject.h>
 
 using namespace std;
 
@@ -129,6 +131,17 @@ SUITE(ObjectComparison){
         ObjRef num1(new NumberObject(9.234));
         ObjRef num2(new NumberObject(9.234));
         ObjRef num3(new NumberObject(-123.2));
+    }
+}
+
+SUITE(FunctorObject){
+    TEST(FunctorObject){
+        int a;
+        ObjRef func1(new FunctorObject( [a](ObjRef o)->ObjRef{
+                                        return ObjRef(new NoneObject);
+                                       }));
+        ObjRef none(new NoneObject);
+        CHECK(none == func1.getRO().get(none));
     }
 }
 

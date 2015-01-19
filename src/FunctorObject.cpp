@@ -2,7 +2,8 @@
 
 using namespace std;
 
-FunctorObject::FunctorObject()
+FunctorObject::FunctorObject(ObjRef(*func)(ObjRef obj)):
+    mFunc(func)
 {
     //ctor
 }

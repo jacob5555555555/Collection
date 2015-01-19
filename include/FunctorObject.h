@@ -2,13 +2,12 @@
 #define FUNCTOROBJECT_H
 
 #include <Object.h>
-
-#include <functional>
+#include <NoneObject.h>
 
 class FunctorObject : public Object
 {
     public:
-        FunctorObject();
+        FunctorObject(ObjRef(*func)(ObjRef obj));
         virtual ~FunctorObject();
         virtual bool compare(const Object& other) const;
         virtual ObjRef get(ObjRef key) const;
@@ -17,6 +16,8 @@ class FunctorObject : public Object
     protected:
     private:
         ObjRef(*mFunc)(ObjRef obj);
+};
+
 };
 
 #endif // FUNCTOROBJECT_H
