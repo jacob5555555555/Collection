@@ -17,6 +17,7 @@ class Object
         Hash hash() const;
         virtual std::string toString() const = 0;
         virtual bool operator==(const Object& other) const = 0;
+        bool operator!=(const Object& other) const;
         virtual ObjRef get(ObjRef key) const = 0;
         virtual ~Object();
     protected:

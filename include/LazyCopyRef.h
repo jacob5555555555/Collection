@@ -29,6 +29,9 @@ public:
     bool operator==(const LazyCopyRef<T>& other) const{
         return *ptr == *(other.ptr);
     }
+    bool operator!=(const LazyCopyRef<T>& other) const{
+        return !operator==(other);
+    }
     //destructor
     ~LazyCopyRef(){
     }

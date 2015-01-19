@@ -5,7 +5,7 @@ using namespace std;
 
 NoneObject::NoneObject()
 {
-    //ctor
+    mHash = 0;
 }
 
 string NoneObject::toString() const{
@@ -14,11 +14,14 @@ string NoneObject::toString() const{
 bool NoneObject::operator==(const Object& other) const{
     if(hash() != other.hash()){
         return false;
-    } else if(typeid(this) != typeid(other)){
+    }
+    const NoneObject* noneOther = dynamic_cast<const NoneObject*>(&other);
+    if(noneOther == nullptr){
         return false;
-    } else {
+    }else{
         return true;
     }
+
 }
 ObjRef NoneObject::get(ObjRef key) const{
     return ObjRef(new NoneObject);

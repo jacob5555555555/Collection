@@ -69,6 +69,54 @@ SUITE(Hashing){
     }
 }
 
+SUITE(ObjectComparison){
+    TEST(Comparison){
+        ObjRef uref1(new UserDefinedObject(std::unordered_map<ObjRef, ObjRef>({
+                                            {ObjRef(new SpecificObject<int>(143)), ObjRef(new SpecificObject<string>("beach"))},
+                                            {ObjRef(new SpecificObject<float>(534.1)), ObjRef(new SpecificObject<long>(9876))}
+                                          })));
+        ObjRef uref2(new UserDefinedObject({
+                                            {ObjRef(new SpecificObject<float>(534.1)), ObjRef(new SpecificObject<long>(9876))},
+                                            {ObjRef(new SpecificObject<int>(143)), ObjRef(new SpecificObject<string>("beach"))}
+                                          }));
+        CHECK(uref1 == uref2);
+
+        ObjRef uref3(new UserDefinedObject({
+                                            {ObjRef(new SpecificObject<float>(2134.1234)), ObjRef(new SpecificObject<long>(1000000000))},
+                                            {ObjRef(new SpecificObject<char>('c')), ObjRef(new SpecificObject<string>("beach"))},
+                                            {ObjRef(new SpecificObject<string>("ketchup")), uref1},
+                                            {uref2, ObjRef(new SpecificObject<double>(19.1))}
+                                          }));
+        ObjRef uref4(new UserDefinedObject({
+                                            {uref2, ObjRef(new SpecificObject<double>(19.1))},
+                                            {ObjRef(new SpecificObject<char>('c')), ObjRef(new SpecificObject<string>("beach"))},
+                                            {ObjRef(new SpecificObject<string>("ketchup")), uref1},
+                                            {ObjRef(new SpecificObject<float>(2134.1234)), ObjRef(new SpecificObject<long>(1000000000))},
+                                          }));
+        CHECK(uref3 == uref4);
+
+        ObjRef none1(new NoneObject);
+        ObjRef none2(new NoneObject);
+
+        CHECK(none1 == none2);
+        CHECK(none1 != uref3);
+        CHECK(none2 != uref2);
+
+        ObjRef spec1(new SpecificObject<int>(9));
+        ObjRef spec2(new SpecificObject<int>(9));
+        ObjRef spec3(new SpecificObject<int>(10));
+
+        ObjRef spec4(new SpecificObject<float>(5));
+
+        CHECK(spec1 == spec2);
+        CHECK(spec1 != spec3);
+        CHECK(spec1 != spec4);
+
+        CHECK(spec1 != none1);
+        CHECK(spec2 != uref4);
+    }
+}
+
 int main(){
     return UnitTest::RunAllTests();
 }
