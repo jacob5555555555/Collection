@@ -134,14 +134,23 @@ SUITE(ObjectComparison){
     }
 }
 
+ObjRef testFunc(const Object& master, const Object& in){
+    return ObjRef(new NoneObject);
+}
+
 SUITE(FunctorObject){
     TEST(FunctorObject){
-        int a;
-        ObjRef func1(new FunctorObject( [a](ObjRef o)->ObjRef{
-                                        return ObjRef(new NoneObject);
-                                       }));
+        ObjRef func1(new FunctorObject<Object, &testFunc>(*(new NoneObject)));
         ObjRef none(new NoneObject);
         CHECK(none == func1.getRO().get(none));
+    }
+
+    TEST(NumberOperations){
+        ObjRef num1(new NumberObject(8.0d));
+        ObjRef num2(new NumberObject(6.0d));
+        ObjRef addSym(new SymbolObject("*"));
+        ObjRef result = num1.getRO().get(addSym).getRO().get(num2);
+        CHECK(result == ObjRef(new NumberObject(48.0d)));
     }
 }
 

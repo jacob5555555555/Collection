@@ -15,6 +15,11 @@ class NumberObject : public Object
     protected:
     private:
         double mNum;
+
+        friend ObjRef add(const NumberObject&  master, const NumberObject& key);
+        friend ObjRef subtract(const NumberObject&  master, const NumberObject& key);
+        friend ObjRef multiply(const NumberObject&  master, const NumberObject& key);
+        friend ObjRef divide(const NumberObject&  master, const NumberObject& key);
 };
 
 #endif // NUMBEROBJECT_H
