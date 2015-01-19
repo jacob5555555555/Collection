@@ -7,7 +7,7 @@
 class SymbolObject : public Object
 {
     public:
-        SymbolObject(std::string& text);
+        SymbolObject(const std::string& text);
         virtual bool compare(const Object& other) const;
         virtual ObjRef get(ObjRef key) const;
         virtual std::string toString() const;

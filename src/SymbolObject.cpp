@@ -3,7 +3,7 @@
 
 using namespace std;
 
-SymbolObject::SymbolObject(std::string& text)
+SymbolObject::SymbolObject(const std::string& text)
 {
     mHash = std::hash<string>()(text);
 }
@@ -22,9 +22,8 @@ bool SymbolObject::compare(const Object& other) const{
     if(symOther == nullptr){
         return false;
     }else{
-        return true;
+        return mText == symOther->mText;
     }
-
 }
 
 ObjRef SymbolObject::get(ObjRef key) const{

@@ -5,6 +5,8 @@
 #include <SpecificObject.h>
 #include <UserDefinedObject.h>
 #include <string>
+#include <SymbolObject.h>
+#include <NumberObject.h>
 
 using namespace std;
 
@@ -114,6 +116,19 @@ SUITE(ObjectComparison){
 
         CHECK(spec1 != none1);
         CHECK(spec2 != uref4);
+    }
+    TEST(SymbolComparison){
+        ObjRef sym1(new SymbolObject("hello"));
+        ObjRef sym2(new SymbolObject("hello"));
+        ObjRef sym3(new SymbolObject("goodbye"));
+
+        CHECK(sym1 == sym2);
+        CHECK(sym2 != sym3);
+    }
+    TEST(NumberComparison){
+        ObjRef num1(new NumberObject(9.234));
+        ObjRef num2(new NumberObject(9.234));
+        ObjRef num3(new NumberObject(-123.2));
     }
 }
 

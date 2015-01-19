@@ -31,7 +31,7 @@
 1421636755 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
 	"Object.h"
 
-1421636747 /home/jacob/Desktop/simple-pl/PL/include/Object.h
+1421639846 /home/jacob/Desktop/simple-pl/PL/include/Object.h
 	<cstddef>
 	<LazyCopyRef.h>
 	<string>
@@ -2990,19 +2990,21 @@
 	<iostream>
 	<memory>
 
-1421636701 /home/jacob/Desktop/simple-pl/PL/include/SpecificObject.h
+1421639745 /home/jacob/Desktop/simple-pl/PL/include/SpecificObject.h
 	<Object.h>
 	<NoneObject.h>
 	<sstream>
 	<typeinfo>
 
-1421635442 source:/home/jacob/Desktop/simple-pl/PL/src/unittest.cpp
+1421638392 source:/home/jacob/Desktop/simple-pl/PL/src/unittest.cpp
 	<unittest++/UnitTest++.h>
 	<Tokenizer.h>
 	<LazyCopyRef.h>
 	<SpecificObject.h>
 	<UserDefinedObject.h>
 	<string>
+	<SymbolObject.h>
+	<NumberObject.h>
 
 1249328246 /usr/include//unittest++/UnitTest++.h
 	"Config.h"
@@ -3126,17 +3128,33 @@
 1421636890 source:/home/jacob/Desktop/simple-pl/PL/src/UserDefinedObject.cpp
 	"UserDefinedObject.h"
 
-1421636898 source:/home/jacob/Desktop/simple-pl/PL/src/NoneObject.cpp
+1421639835 source:/home/jacob/Desktop/simple-pl/PL/src/NoneObject.cpp
 	"NoneObject.h"
 	<type_traits>
 
-1421636681 /home/jacob/Desktop/simple-pl/PL/include/NoneObject.h
+1421639823 /home/jacob/Desktop/simple-pl/PL/include/NoneObject.h
 	<Object.h>
 
-1421637400 source:/home/jacob/Desktop/simple-pl/PL/src/SymbolObject.cpp
+1421639877 source:/home/jacob/Desktop/simple-pl/PL/src/SymbolObject.cpp
 	"SymbolObject.h"
 	<NoneObject.h>
 
-1421637263 /home/jacob/Desktop/simple-pl/PL/include/SymbolObject.h
+1421639871 /home/jacob/Desktop/simple-pl/PL/include/SymbolObject.h
 	<Object.h>
+	<string>
+
+1421639436 source:/home/jacob/Desktop/simple-pl/PL/src/NumberObject.cpp
+	"NumberObject.h"
+	<NoneObject.h>
+	<SymbolObject.h>
+
+1421637985 /home/jacob/Desktop/simple-pl/PL/include/NumberObject.h
+	<Object.h>
+
+1421639756 source:/home/jacob/Desktop/simple-pl/PL/src/FunctorObject.cpp
+	"FunctorObject.h"
+
+1421639785 /home/jacob/Desktop/simple-pl/PL/include/FunctorObject.h
+	<Object.h>
+	<functional>
 
