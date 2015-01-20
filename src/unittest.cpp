@@ -9,6 +9,7 @@
 #include <NumberObject.h>
 #include <FunctorObject.h>
 #include <NoneObject.h>
+#include <Expression.h>
 
 using namespace std;
 
@@ -145,12 +146,39 @@ SUITE(FunctorObject){
         //CHECK(none == func1.getRO().get(none));
     }
 
-    TEST(NumberOperations){
+    TEST(Plus){
         ObjRef num1(new NumberObject(8.0d));
         ObjRef num2(new NumberObject(6.0d));
         ObjRef addSym(new SymbolObject("+"));
-        ObjRef result = num1.getRO().get(addSym).getRO().get(num2);
+        ObjRef result = num1->get(addSym)->get(num2);
         CHECK(result == ObjRef(new NumberObject(14.0d)));
+    }
+    TEST(Minus){
+        ObjRef num1(new NumberObject(100.0d));
+        ObjRef num2(new NumberObject(5.0d));
+        ObjRef addSym(new SymbolObject("-"));
+        ObjRef result = num1->get(addSym)->get(num2);
+        CHECK(result == ObjRef(new NumberObject(95.0d)));
+    }
+    TEST(Times){
+        ObjRef num1(new NumberObject(11.0d));
+        ObjRef num2(new NumberObject(7.0d));
+        ObjRef addSym(new SymbolObject("*"));
+        ObjRef result = num1->get(addSym)->get(num2);
+        CHECK(result == ObjRef(new NumberObject(77.0d)));
+    }
+    TEST(Divide){
+        ObjRef num1(new NumberObject(5000.0d));
+        ObjRef num2(new NumberObject(1000.0d));
+        ObjRef addSym(new SymbolObject("/"));
+        ObjRef result = num1->get(addSym)->get(num2);
+        CHECK(result == ObjRef(new NumberObject(5.0d)));
+    }
+}
+
+SUITE(Expression){
+    TEST(StatementEvaluation){
+        CHECK(Expression({ObjRef(new NumberObject(9.0d)), ObjRef(new SymbolObject("/")), ObjRef(new NumberObject(3.0d))}).evaluate() == ObjRef(new NumberObject(3.0d)));
     }
 }
 

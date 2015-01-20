@@ -22,8 +22,9 @@ public:
         swap(other);
     }
     //assignment
-    LazyCopyRef<T> operator=(LazyCopyRef<T> other){
+    LazyCopyRef<T>& operator=(LazyCopyRef<T> other){
         swap(other);
+        return *this;
     }
     //comparison
     bool operator==(const LazyCopyRef<T>& other) const{
@@ -41,6 +42,9 @@ public:
     //get read-only reference to data
     const T& getRO() const{
         return *ptr;
+    }
+    inline std::shared_ptr<const T> operator->() const{
+        return std::const_pointer_cast<const T>(ptr);
     }
 
     //makes copy of data if this isn't the only LazyCopyRef<T> pointing to it, then returns reference

@@ -2,3 +2,4 @@
 /obj
 test.cpp
 ValgrindOut.xml
+gmon.out

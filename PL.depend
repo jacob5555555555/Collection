@@ -28,7 +28,7 @@
 
 1421184099 D
 
-1421685833 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
+1421685981 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
 	"Object.h"
 
 1421685875 /home/jacob/Desktop/simple-pl/PL/include/Object.h
@@ -2985,7 +2985,7 @@
 1421292534 source:/home/jacob/Desktop/simple-pl/PL/src/LazyCopyRef.cpp
 	"LazyCopyRef.h"
 
-1421637447 /home/jacob/Desktop/simple-pl/PL/include/LazyCopyRef.h
+1421716076 /home/jacob/Desktop/simple-pl/PL/include/LazyCopyRef.h
 	<utility>
 	<iostream>
 	<memory>
@@ -2996,7 +2996,7 @@
 	<sstream>
 	<typeinfo>
 
-1421685597 source:/home/jacob/Desktop/simple-pl/PL/src/unittest.cpp
+1421715989 source:/home/jacob/Desktop/simple-pl/PL/src/unittest.cpp
 	<unittest++/UnitTest++.h>
 	<Tokenizer.h>
 	<LazyCopyRef.h>
@@ -3007,6 +3007,7 @@
 	<NumberObject.h>
 	<FunctorObject.h>
 	<NoneObject.h>
+	<Statement.h>
 
 1249328246 /usr/include//unittest++/UnitTest++.h
 	"Config.h"
@@ -3162,4 +3163,11 @@
 1421685780 /home/jacob/Desktop/simple-pl/PL/include/FunctorObject.h
 	<Object.h>
 	<NoneObject.h>
+
+1421716011 source:/home/jacob/Desktop/simple-pl/PL/src/Statement.cpp
+	"Statement.h"
+
+1421715566 /home/jacob/Desktop/simple-pl/PL/include/Statement.h
+	<vector>
+	<Object.h>
 
