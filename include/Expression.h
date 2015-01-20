@@ -4,14 +4,17 @@
 #include<vector>
 #include<Object.h>
 
-class Expression
+class Expression : public Object
 {
-    public:
-        Expression(std::vector<ObjRef>&& objects);
-        ObjRef evaluate();
-        ~Expression();
-    private:
-        std::vector<ObjRef> objList;
+public:
+    Expression(std::vector<ObjRef>&& objects);
+    ~Expression();
+    virtual ObjRef evaluate() const;
+    virtual bool compare(const Object& other) const;
+    virtual ObjRef get(ObjRef key) const;
+    virtual std::string toString() const;
+private:
+    std::vector<ObjRef> objList;
 };
 
 #endif // STATEMENT_H

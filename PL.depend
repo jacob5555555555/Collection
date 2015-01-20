@@ -2996,7 +2996,7 @@
 	<sstream>
 	<typeinfo>
 
-1421715989 source:/home/jacob/Desktop/simple-pl/PL/src/unittest.cpp
+1421717078 source:/home/jacob/Desktop/simple-pl/PL/src/unittest.cpp
 	<unittest++/UnitTest++.h>
 	<Tokenizer.h>
 	<LazyCopyRef.h>
@@ -3007,7 +3007,7 @@
 	<NumberObject.h>
 	<FunctorObject.h>
 	<NoneObject.h>
-	<Statement.h>
+	<Expression.h>
 
 1249328246 /usr/include//unittest++/UnitTest++.h
 	"Config.h"
@@ -3128,7 +3128,7 @@
 	<unordered_map>
 	<Object.h>
 
-1421685859 source:/home/jacob/Desktop/simple-pl/PL/src/UserDefinedObject.cpp
+1421726193 source:/home/jacob/Desktop/simple-pl/PL/src/UserDefinedObject.cpp
 	"UserDefinedObject.h"
 	<Object.h>
 
@@ -3168,6 +3168,13 @@
 	"Statement.h"
 
 1421715566 /home/jacob/Desktop/simple-pl/PL/include/Statement.h
+	<vector>
+	<Object.h>
+
+1421726295 source:/home/jacob/Desktop/simple-pl/PL/src/Expression.cpp
+	"Expression.h"
+
+1421726415 /home/jacob/Desktop/simple-pl/PL/include/Expression.h
 	<vector>
 	<Object.h>
 

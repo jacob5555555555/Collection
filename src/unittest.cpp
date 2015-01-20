@@ -71,6 +71,11 @@ SUITE(Hashing){
                                             {ObjRef(new SpecificObject<float>(2134.1234)), ObjRef(new SpecificObject<long>(1000000000))},
                                           }));
         CHECK(ref3.getRO().hash() == ref4.getRO().hash());
+
+        ObjRef expRef1(new Expression({ObjRef(new NumberObject(9.0d)), ObjRef(new SymbolObject("/")), ObjRef(new NumberObject(3.0d))}));
+        ObjRef expRef2(new Expression({ObjRef(new NumberObject(9.0d)), ObjRef(new SymbolObject("/")), ObjRef(new NumberObject(3.0d))}));
+
+        CHECK(expRef1->hash() == expRef2->hash());
     }
 }
 

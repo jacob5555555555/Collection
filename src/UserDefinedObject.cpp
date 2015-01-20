@@ -14,7 +14,6 @@ UserDefinedObject::UserDefinedObject(std::unordered_map<ObjRef, ObjRef> objects)
         hashSoFar = unorderedHash(hashSoFar, orderedHash(hasher(obj.first), hasher(obj.second)));
     }
     mHash = hashSoFar;
-
 }
 
 UserDefinedObject::~UserDefinedObject(){
