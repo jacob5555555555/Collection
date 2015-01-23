@@ -1,5 +1,6 @@
 #include "NoneObject.h"
 #include <type_traits>
+#include "ObjRef.h"
 
 using namespace std;
 

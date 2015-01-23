@@ -1,5 +1,6 @@
 #include "Object.h"
 #include <NumberObject.h>
+#include <ObjRef.h>
 
 Hash orderedHash(Hash a, Hash b){
     return b ^ (b >> (a % 4));
@@ -13,7 +14,8 @@ static inline Hash removeUnorderedHash(Hash keep, Hash remove){
     return keep ^ remove;
 }
 
-Object::Object()
+Object::Object():
+    _refCount(0)
 {
 }
 

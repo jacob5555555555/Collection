@@ -2,6 +2,7 @@
 #define FUNCTOROBJECT_H
 
 #include <Object.h>
+#include <ObjRef.h>
 #include <NoneObject.h>
 
 template <typename T, ObjRef func(const T& master, const T& key)> //where T is subclass of Object

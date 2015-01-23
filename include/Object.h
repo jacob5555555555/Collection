@@ -2,16 +2,16 @@
 #define OBJECT_H
 
 #include <cstddef> //size_t
-#include <LazyCopyRef.h>
 #include <string>
+
+#include "ObjRef.h"
+#include "Hash.h"
 
 class Object;
 
-typedef size_t Hash;
-typedef LazyCopyRef<Object> ObjRef;
-
 class Object
 {
+    friend class ObjRef;
     public:
         Object();
         Hash hash() const;
@@ -25,6 +25,7 @@ class Object
     protected:
         Hash mHash;
     private:
+        int _refCount;
 };
 
 namespace std{
