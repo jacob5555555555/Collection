@@ -14,6 +14,18 @@ Expression::Expression(std::vector<ObjRef>&& objects):
 
 }
 
+Expression::Expression(std::vector<ObjRef>& objects):
+    objList(objects)
+{
+    std::hash<ObjRef> hasher;
+    Hash hashSoFar = 0;
+    for (const auto& obj : objList){
+        hashSoFar = orderedHash(hashSoFar, hasher(obj));
+    }
+    mHash = hashSoFar;
+
+}
+
 Expression::~Expression()
 {
 }
@@ -45,8 +57,10 @@ std::string Expression::toString() const{
         ret += obj->toString();
         ret += ", ";
     }
-    ret.pop_back();
-    ret.pop_back();
+    if (ret.size() >= 2){
+        ret.pop_back();
+        ret.pop_back();
+    }
     ret += ")";
     return ret;
 }

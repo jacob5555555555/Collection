@@ -41,11 +41,13 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-std=c++11" />
+					<Add option="-pg" />
 					<Add option="-g" />
 					<Add directory="include" />
 					<Add directory="/usr/include/" />
 				</Compiler>
 				<Linker>
+					<Add option="-pg" />
 					<Add option="-lunittest++" />
 				</Linker>
 			</Target>
@@ -71,6 +73,7 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include/ArrayPiece.h" />
+		<Unit filename="include/Expression.h" />
 		<Unit filename="include/FunctorObject.h" />
 		<Unit filename="include/LazyCopyRef.h" />
 		<Unit filename="include/NoneObject.h" />
@@ -80,6 +83,8 @@
 		<Unit filename="include/SymbolObject.h" />
 		<Unit filename="include/Tokenizer.h" />
 		<Unit filename="include/UserDefinedObject.h" />
+		<Unit filename="include/parse.h" />
+		<Unit filename="src/Expression.cpp" />
 		<Unit filename="src/FunctorObject.cpp" />
 		<Unit filename="src/NoneObject.cpp" />
 		<Unit filename="src/NumberObject.cpp" />
@@ -87,6 +92,7 @@
 		<Unit filename="src/SymbolObject.cpp" />
 		<Unit filename="src/Tokenizer.cpp" />
 		<Unit filename="src/UserDefinedObject.cpp" />
+		<Unit filename="src/parse.cpp" />
 		<Unit filename="src/unittest.cpp">
 			<Option target="Test" />
 			<Option target="TestFullOptimizations" />

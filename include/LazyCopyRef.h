@@ -31,6 +31,9 @@ public:
         if (ptr == other.ptr){
             return true;
         }
+        if (ptr == nullptr || other.ptr == nullptr){
+            return false;
+        }
         return *ptr == *(other.ptr);
     }
     bool operator!=(const LazyCopyRef<T>& other) const{
@@ -58,10 +61,10 @@ public:
     void swap(LazyCopyRef<T> other){
         ptr.swap(other.ptr);
     }
-private:
     void deepCopy(){
         ptr.reset(new T(*ptr));
     }
+private:
     std::shared_ptr<T> ptr;
 };
 

@@ -19,6 +19,7 @@ class Object
         bool operator==(const Object& other) const;
         virtual bool compare(const Object& other) const = 0;
         bool operator!=(const Object& other) const;
+        virtual ObjRef evaluate() const;
         virtual ObjRef get(ObjRef key) const = 0;
         virtual ~Object();
     protected:

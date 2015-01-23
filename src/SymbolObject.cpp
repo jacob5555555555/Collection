@@ -3,7 +3,8 @@
 
 using namespace std;
 
-SymbolObject::SymbolObject(const std::string& text)
+SymbolObject::SymbolObject(const std::string& text):
+    mText(text)
 {
     mHash = std::hash<string>()(text);
 }

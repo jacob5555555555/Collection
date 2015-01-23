@@ -1,4 +1,5 @@
 #include "Object.h"
+#include <NumberObject.h>
 
 Hash orderedHash(Hash a, Hash b){
     return b ^ (b >> (a % 4));
@@ -30,6 +31,10 @@ bool Object::operator==(const Object& other) const{
 
 bool Object::operator!=(const Object& other) const{
     return !operator==(other);
+}
+
+ObjRef Object::evaluate() const{
+    return ObjRef(new NumberObject(-111111111));
 }
 
 Object::~Object()

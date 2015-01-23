@@ -28,20 +28,21 @@
 
 1421184099 D
 
-1421685981 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
+1421978300 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
 	"Object.h"
+	<NumberObject.h>
 
-1421685875 /home/jacob/Desktop/simple-pl/PL/include/Object.h
+1421977901 /home/jacob/Desktop/simple-pl/PL/include/Object.h
 	<cstddef>
 	<LazyCopyRef.h>
 	<string>
 
-1421195329 source:/home/jacob/Desktop/simple-pl/PL/src/Tokenizer.cpp
+1421727029 source:/home/jacob/Desktop/simple-pl/PL/src/Tokenizer.cpp
 	"Tokenizer.h"
 	<iostream>
 	<string>
 
-1421290036 /home/jacob/Desktop/simple-pl/PL/include/Tokenizer.h
+1421727027 /home/jacob/Desktop/simple-pl/PL/include/Tokenizer.h
 	<unordered_map>
 	<istream>
 	<string>
@@ -2985,7 +2986,7 @@
 1421292534 source:/home/jacob/Desktop/simple-pl/PL/src/LazyCopyRef.cpp
 	"LazyCopyRef.h"
 
-1421716076 /home/jacob/Desktop/simple-pl/PL/include/LazyCopyRef.h
+1421978158 /home/jacob/Desktop/simple-pl/PL/include/LazyCopyRef.h
 	<utility>
 	<iostream>
 	<memory>
@@ -2996,7 +2997,7 @@
 	<sstream>
 	<typeinfo>
 
-1421717078 source:/home/jacob/Desktop/simple-pl/PL/src/unittest.cpp
+1421978794 source:/home/jacob/Desktop/simple-pl/PL/src/unittest.cpp
 	<unittest++/UnitTest++.h>
 	<Tokenizer.h>
 	<LazyCopyRef.h>
@@ -3008,6 +3009,7 @@
 	<FunctorObject.h>
 	<NoneObject.h>
 	<Expression.h>
+	<parse.h>
 
 1249328246 /usr/include//unittest++/UnitTest++.h
 	"Config.h"
@@ -3139,7 +3141,7 @@
 1421639823 /home/jacob/Desktop/simple-pl/PL/include/NoneObject.h
 	<Object.h>
 
-1421639877 source:/home/jacob/Desktop/simple-pl/PL/src/SymbolObject.cpp
+1421977652 source:/home/jacob/Desktop/simple-pl/PL/src/SymbolObject.cpp
 	"SymbolObject.h"
 	<NoneObject.h>
 
@@ -3171,10 +3173,26 @@
 	<vector>
 	<Object.h>
 
-1421726295 source:/home/jacob/Desktop/simple-pl/PL/src/Expression.cpp
+1421978080 source:/home/jacob/Desktop/simple-pl/PL/src/Expression.cpp
 	"Expression.h"
 
-1421726415 /home/jacob/Desktop/simple-pl/PL/include/Expression.h
+1421975393 /home/jacob/Desktop/simple-pl/PL/include/Expression.h
 	<vector>
 	<Object.h>
+
+1421978984 source:/home/jacob/Desktop/simple-pl/PL/src/parse.cpp
+	"parse.h"
+	<Expression.h>
+	<NumberObject.h>
+	<UserDefinedObject.h>
+	<Object.h>
+	<SymbolObject.h>
+	<NoneObject.h>
+	<iostream>
+	<algorithm>
+
+1421977777 /home/jacob/Desktop/simple-pl/PL/include/parse.h
+	<Object.h>
+	<string>
+	<vector>
 

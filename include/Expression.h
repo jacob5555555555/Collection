@@ -8,6 +8,7 @@ class Expression : public Object
 {
 public:
     Expression(std::vector<ObjRef>&& objects);
+    Expression(std::vector<ObjRef>& objects);
     ~Expression();
     virtual ObjRef evaluate() const;
     virtual bool compare(const Object& other) const;

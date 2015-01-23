@@ -10,6 +10,7 @@
 #include <FunctorObject.h>
 #include <NoneObject.h>
 #include <Expression.h>
+#include <parse.h>
 
 using namespace std;
 
@@ -184,6 +185,22 @@ SUITE(FunctorObject){
 SUITE(Expression){
     TEST(StatementEvaluation){
         CHECK(Expression({ObjRef(new NumberObject(9.0d)), ObjRef(new SymbolObject("/")), ObjRef(new NumberObject(3.0d))}).evaluate() == ObjRef(new NumberObject(3.0d)));
+    }
+}
+
+SUITE(parsing){
+    TEST(parse){
+        ObjRef expected1(new Expression(  {ObjRef(new NumberObject(9.9)), ObjRef(new SymbolObject("+")), ObjRef(new NumberObject(-45))}  ));
+        vector<string> stringVec{"9.9", "+", "-45"};
+        ObjRef gotten1 = parse(stringVec.begin(), stringVec.end());
+
+        cout << "gotten: " << gotten1->toString() << endl;
+
+        CHECK(expected1 == gotten1);
+    }
+    TEST(parseString){
+        cout << "value: " << parseString("1 + 5 - 2")->toString() << endl;
+        CHECK(parseString("1 + 5 - 2")->evaluate() == ObjRef(new NumberObject(4)));
     }
 }
 
