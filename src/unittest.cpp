@@ -198,7 +198,6 @@ SUITE(parsing){
     }
     TEST(parseString){
         CHECK(parseString("1 + 5 - 2")->evaluate() == ObjRef(new NumberObject(4)));
-        cout << parseString("1 + ( 3 * 9 )")->evaluate()->toString() << endl;
         CHECK(parseString("1 + ( 3 * 9 )")->evaluate() == ObjRef(new NumberObject(28)));
     }
 }

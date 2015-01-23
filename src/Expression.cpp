@@ -38,7 +38,7 @@ ObjRef Expression::evaluate(){
     }
     ObjRef soFar = objList[0];
     for (size_t i = 1; i < objList.size(); ++i){
-        soFar = soFar->get(objList[i]);
+        soFar = soFar->get(objList[i]->evaluate());
     }
     return soFar;
 }
