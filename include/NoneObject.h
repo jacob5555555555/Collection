@@ -10,7 +10,7 @@ class NoneObject : public Object
         NoneObject();
         virtual std::string toString() const;
         virtual bool compare(const Object& other) const;
-        virtual ObjRef get(ObjRef key) const;
+        virtual ObjRef get(ObjRef key);
         virtual ~NoneObject();
     protected:
     private:

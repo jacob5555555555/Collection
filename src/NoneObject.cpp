@@ -21,7 +21,7 @@ bool NoneObject::compare(const Object& other) const{
     }
 
 }
-ObjRef NoneObject::get(ObjRef key) const{
+ObjRef NoneObject::get(ObjRef key){
     return ObjRef(new NoneObject);
 }
 

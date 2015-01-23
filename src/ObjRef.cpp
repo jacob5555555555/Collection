@@ -51,23 +51,12 @@ const Object& ObjRef::getRO() const{
     return *ptr;
 }
 
-//make copy then get reference to new copy
-Object& ObjRef::get(){
-    if(!(ptr->_refCount) == 0){
-        deepCopy();
-    }
-    return *ptr;
-}
 //swaps with another ObjRef<T>
 void ObjRef::swap(ObjRef other){
     std::swap(ptr, other.ptr);
 }
 
-void ObjRef::deepCopy(){
-    cerr << "not implemented" << endl;
-}
-
-const Object* ObjRef::operator->() const{
+Object* ObjRef::operator->() const{
     return ptr;
 }
 

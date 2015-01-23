@@ -35,8 +35,8 @@ bool Object::operator!=(const Object& other) const{
     return !operator==(other);
 }
 
-ObjRef Object::evaluate() const{
-    return ObjRef(new NumberObject(-111111111));
+ObjRef Object::evaluate(){
+    return ObjRef(this);
 }
 
 Object::~Object()

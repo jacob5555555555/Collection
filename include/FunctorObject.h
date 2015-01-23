@@ -23,7 +23,7 @@ public:
         }
     }
 
-    virtual ObjRef get(ObjRef key) const{
+    virtual ObjRef get(ObjRef key){
         const T* tObj = dynamic_cast<const T*>(&key.getRO());
         if (tObj == nullptr){
             return ObjRef(new NoneObject);

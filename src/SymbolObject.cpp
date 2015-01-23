@@ -27,6 +27,6 @@ bool SymbolObject::compare(const Object& other) const{
     }
 }
 
-ObjRef SymbolObject::get(ObjRef key) const{
+ObjRef SymbolObject::get(ObjRef key){
     return ObjRef(new NoneObject);
 }

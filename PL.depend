@@ -30,12 +30,12 @@
 
 1421184099 D
 
-1422051289 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
+1422052090 source:/home/jacob/Desktop/simple-pl/PL/src/Object.cpp
 	"Object.h"
 	<NumberObject.h>
 	<ObjRef.h>
 
-1422051645 /home/jacob/Desktop/simple-pl/PL/include/Object.h
+1422052340 /home/jacob/Desktop/simple-pl/PL/include/Object.h
 	<cstddef>
 	<string>
 	"ObjRef.h"
@@ -2995,13 +2995,13 @@
 	<iostream>
 	<memory>
 
-1422047905 /home/jacob/Desktop/simple-pl/PL/include/SpecificObject.h
+1422052553 /home/jacob/Desktop/simple-pl/PL/include/SpecificObject.h
 	<Object.h>
 	<NoneObject.h>
 	<sstream>
 	<typeinfo>
 
-1421979595 source:/home/jacob/Desktop/simple-pl/PL/src/unittest.cpp
+1422052005 source:/home/jacob/Desktop/simple-pl/PL/src/unittest.cpp
 	<unittest++/UnitTest++.h>
 	<Tokenizer.h>
 	<LazyCopyRef.h>
@@ -3128,7 +3128,7 @@
 1249328246 /usr/include//unittest++/Posix/TimeHelpers.h
 	<sys/time.h>
 
-1422047905 /home/jacob/Desktop/simple-pl/PL/include/UserDefinedObject.h
+1422052431 /home/jacob/Desktop/simple-pl/PL/include/UserDefinedObject.h
 	<vector>
 	<LazyCopyRef.h>
 	<unordered_map>
@@ -3138,36 +3138,36 @@
 	"UserDefinedObject.h"
 	<Object.h>
 
-1422049358 source:/home/jacob/Desktop/simple-pl/PL/src/NoneObject.cpp
+1422052484 source:/home/jacob/Desktop/simple-pl/PL/src/NoneObject.cpp
 	"NoneObject.h"
 	<type_traits>
 	"ObjRef.h"
 
-1422047905 /home/jacob/Desktop/simple-pl/PL/include/NoneObject.h
+1422052489 /home/jacob/Desktop/simple-pl/PL/include/NoneObject.h
 	<Object.h>
 
-1422047905 source:/home/jacob/Desktop/simple-pl/PL/src/SymbolObject.cpp
+1422052415 source:/home/jacob/Desktop/simple-pl/PL/src/SymbolObject.cpp
 	"SymbolObject.h"
 	<NoneObject.h>
 
-1422047905 /home/jacob/Desktop/simple-pl/PL/include/SymbolObject.h
+1422052423 /home/jacob/Desktop/simple-pl/PL/include/SymbolObject.h
 	<Object.h>
 	<string>
 
-1422047905 source:/home/jacob/Desktop/simple-pl/PL/src/NumberObject.cpp
+1422052389 source:/home/jacob/Desktop/simple-pl/PL/src/NumberObject.cpp
 	"NumberObject.h"
 	<Object.h>
 	<NoneObject.h>
 	<SymbolObject.h>
 	<FunctorObject.h>
 
-1422047905 /home/jacob/Desktop/simple-pl/PL/include/NumberObject.h
+1422052402 /home/jacob/Desktop/simple-pl/PL/include/NumberObject.h
 	<Object.h>
 
 1421682263 source:/home/jacob/Desktop/simple-pl/PL/src/FunctorObject.cpp
 	"FunctorObject.h"
 
-1422049332 /home/jacob/Desktop/simple-pl/PL/include/FunctorObject.h
+1422052378 /home/jacob/Desktop/simple-pl/PL/include/FunctorObject.h
 	<Object.h>
 	<ObjRef.h>
 	<NoneObject.h>
@@ -3179,12 +3179,12 @@
 	<vector>
 	<Object.h>
 
-1422049100 source:/home/jacob/Desktop/simple-pl/PL/src/Expression.cpp
+1422052537 source:/home/jacob/Desktop/simple-pl/PL/src/Expression.cpp
 	"Expression.h"
 	<NoneObject.h>
 	<ObjRef.h>
 
-1422047905 /home/jacob/Desktop/simple-pl/PL/include/Expression.h
+1422052356 /home/jacob/Desktop/simple-pl/PL/include/Expression.h
 	<vector>
 	<Object.h>
 
@@ -3204,7 +3204,7 @@
 	<string>
 	<vector>
 
-1422051622 /home/jacob/Desktop/simple-pl/PL/include/ObjRef.h
+1422052503 /home/jacob/Desktop/simple-pl/PL/include/ObjRef.h
 	<utility>
 	<functional>
 	"Hash.h"
@@ -3212,7 +3212,7 @@
 1422050585 /home/jacob/Desktop/simple-pl/PL/include/Hash.h
 	<stddef.h>
 
-1422051728 source:/home/jacob/Desktop/simple-pl/PL/src/ObjRef.cpp
+1422052511 source:/home/jacob/Desktop/simple-pl/PL/src/ObjRef.cpp
 	"ObjRef.h"
 	"Object.h"
 	<utility>

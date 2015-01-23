@@ -10,7 +10,7 @@ class NumberObject : public Object
         NumberObject(double num);
         virtual ~NumberObject();
         virtual bool compare(const Object& other) const;
-        virtual ObjRef get(ObjRef key) const;
+        virtual ObjRef get(ObjRef key);
         virtual std::string toString() const;
     protected:
     private:

@@ -10,9 +10,9 @@ public:
     Expression(std::vector<ObjRef>&& objects);
     Expression(std::vector<ObjRef>& objects);
     ~Expression();
-    virtual ObjRef evaluate() const;
+    virtual ObjRef evaluate();
     virtual bool compare(const Object& other) const;
-    virtual ObjRef get(ObjRef key) const;
+    virtual ObjRef get(ObjRef key);
     virtual std::string toString() const;
 private:
     std::vector<ObjRef> objList;

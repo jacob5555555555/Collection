@@ -26,15 +26,12 @@ public:
     ~ObjRef();
     //get read-only reference to data
     const Object& getRO() const;
-    const Object* operator->() const;
+    Object* operator->() const;
 
-    //makes copy of data if this isn't the only ObjRef<T> pointing to it, then returns reference
-    Object& get();
     //swaps with another ObjRef<T>
     void swap(ObjRef other);
     Hash hash() const;
 private:
-    void deepCopy();
     Object* ptr;
 };
 
