@@ -203,6 +203,12 @@ SUITE(parsing){
     }
 }
 
+SUITE(evaluate){
+    TEST(evaluate){
+        CHECK(ObjRef(new NumberObject(4))->evaluate() == ObjRef(new NumberObject(4)));
+    }
+}
+
 int main(){
     return UnitTest::RunAllTests();
 }

@@ -15,7 +15,7 @@ class UserDefinedObject : public Object
         virtual ~UserDefinedObject();
         virtual bool compare(const Object& other) const;
         virtual std::string toString() const;
-        virtual ObjRef get(ObjRef key) const;
+        virtual ObjRef get(ObjRef key);
     protected:
         std::unordered_map<ObjRef, ObjRef> mObjects;
     private:

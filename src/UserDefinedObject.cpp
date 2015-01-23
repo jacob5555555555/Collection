@@ -41,6 +41,6 @@ std::string UserDefinedObject::toString() const{
     ret += "}";
     return ret;
 }
-ObjRef UserDefinedObject::get(ObjRef key) const{
+ObjRef UserDefinedObject::get(ObjRef key){
     return mObjects.at(key);
 }

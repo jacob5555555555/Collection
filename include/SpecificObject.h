@@ -21,7 +21,7 @@ class SpecificObject : public Object
             ss >> ret;
             return ret;
         }
-    virtual ObjRef get(ObjRef key) const{
+    virtual ObjRef get(ObjRef key){
         return ObjRef(new NoneObject);
     }
     virtual bool compare(const Object& other) const{

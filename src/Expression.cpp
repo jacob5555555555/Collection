@@ -32,7 +32,7 @@ Expression::~Expression()
 {
 }
 
-ObjRef Expression::evaluate() const{
+ObjRef Expression::evaluate(){
     if (objList.size() == 0){
         return ObjRef(new NoneObject);
     }
@@ -52,7 +52,7 @@ bool Expression::compare(const Object& other) const{
     }
 }
 
-ObjRef Expression::get(ObjRef key) const{
+ObjRef Expression::get(ObjRef key){
     return evaluate()->get(key);
 }
 

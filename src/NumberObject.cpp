@@ -49,7 +49,7 @@ ObjRef divide (const NumberObject&  master, const NumberObject& key){
     return ObjRef(new NumberObject(master.mNum / key.mNum));
 }
 
-ObjRef NumberObject::get(ObjRef key) const{
+ObjRef NumberObject::get(ObjRef key){
     if (key == plusSym){
         return ObjRef(new FunctorObject<NumberObject, add>(*this));
     } else if (key == minusSym){
