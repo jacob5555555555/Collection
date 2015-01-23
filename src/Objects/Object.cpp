@@ -1,6 +1,7 @@
-#include "Object.h"
-#include <NumberObject.h>
-#include <ObjRef.h>
+#include "Objects/Object.h"
+
+#include "Objects/NumberObject.h"
+#include "Objects/ObjRef.h"
 
 Hash orderedHash(Hash a, Hash b){
     return b ^ (b >> (a % 4));

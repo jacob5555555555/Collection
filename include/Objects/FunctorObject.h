@@ -1,9 +1,9 @@
 #ifndef FUNCTOROBJECT_H
 #define FUNCTOROBJECT_H
 
-#include <Object.h>
-#include <ObjRef.h>
-#include <NoneObject.h>
+#include "Objects/Object.h"
+#include "Objects/ObjRef.h"
+#include "Objects/NoneObject.h"
 
 template <typename T, ObjRef func(const T& master, const T& key)> //where T is subclass of Object
 class FunctorObject : public Object{

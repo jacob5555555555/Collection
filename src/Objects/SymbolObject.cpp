@@ -1,5 +1,6 @@
-#include "SymbolObject.h"
-#include <NoneObject.h>
+#include "Objects/SymbolObject.h"
+
+#include "Objects/NoneObject.h"
 
 using namespace std;
 

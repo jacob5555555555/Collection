@@ -1,7 +1,7 @@
 #ifndef NONEOBJECT_H
 #define NONEOBJECT_H
 
-#include <Object.h>
+#include "Objects/Object.h"
 
 
 class NoneObject : public Object

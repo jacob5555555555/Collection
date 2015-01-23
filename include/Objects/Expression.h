@@ -2,7 +2,8 @@
 #define STATEMENT_H
 
 #include<vector>
-#include<Object.h>
+
+#include "Objects/Object.h"
 
 class Expression : public Object
 {

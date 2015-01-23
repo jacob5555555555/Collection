@@ -1,9 +1,9 @@
-#include "NumberObject.h"
+#include "Objects/NumberObject.h"
 
-#include <Object.h>
-#include <NoneObject.h>
-#include <SymbolObject.h>
-#include <FunctorObject.h>
+#include "Objects/Object.h"
+#include "Objects/NoneObject.h"
+#include "Objects/SymbolObject.h"
+#include "Objects/FunctorObject.h"
 
 using namespace std;
 

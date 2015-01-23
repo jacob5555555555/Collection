@@ -1,6 +1,7 @@
-#include "Expression.h"
-#include <NoneObject.h>
-#include <ObjRef.h>
+#include "Objects/Expression.h"
+
+#include "Objects/NoneObject.h"
+#include "Objects/ObjRef.h"
 
 using namespace std;
 

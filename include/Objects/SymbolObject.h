@@ -1,7 +1,8 @@
 #ifndef SYMBOLOBJECT_H
 #define SYMBOLOBJECT_H
 
-#include <Object.h>
+#include "Objects/Object.h"
+
 #include <string>
 
 class SymbolObject : public Object

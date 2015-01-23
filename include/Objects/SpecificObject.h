@@ -1,10 +1,11 @@
 #ifndef SPECIFICOBJECT_H
 #define SPECIFICOBJECT_H
 
-#include <Object.h>
-#include <NoneObject.h>
 #include <sstream>
 #include <typeinfo>
+
+#include "Objects/Object.h"
+#include "Objects/NoneObject.h"
 
 template<typename T>
 class SpecificObject : public Object

@@ -1,14 +1,13 @@
 #include "parse.h"
 
-#include <Expression.h>
-#include <NumberObject.h>
-#include <UserDefinedObject.h>
-#include <Object.h>
-#include <SymbolObject.h>
-#include <NoneObject.h>
 #include <iostream>
-
 #include <algorithm>
+
+#include "Objects/Expression.h"
+#include "Objects/NumberObject.h"
+#include "Objects/UserDefinedObject.h"
+#include "Objects/SymbolObject.h"
+#include "Objects/NoneObject.h"
 
 using namespace std;
 

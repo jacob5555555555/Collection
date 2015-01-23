@@ -1,5 +1,6 @@
-#include "UserDefinedObject.h"
-#include <Object.h>
+#include "Objects/UserDefinedObject.h"
+
+#include "Objects/Object.h"
 
 using namespace std;
 

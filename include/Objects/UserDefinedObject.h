@@ -2,9 +2,9 @@
 #define USER_DEFINED_OBJECT_H
 
 #include <vector>
-#include <LazyCopyRef.h>
 #include <unordered_map>
-#include <Object.h>
+
+#include "Objects/Object.h"
 
 class UserDefinedObject;
 
