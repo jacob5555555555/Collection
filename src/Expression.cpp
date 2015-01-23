@@ -1,4 +1,5 @@
 #include "Expression.h"
+#include <NoneObject.h>
 
 using namespace std;
 
@@ -31,6 +32,9 @@ Expression::~Expression()
 }
 
 ObjRef Expression::evaluate() const{
+    if (objList.size() == 0){
+        return ObjRef(new NoneObject);
+    }
     ObjRef soFar = objList[0];
     for (size_t i = 1; i < objList.size(); ++i){
         soFar = soFar->get(objList[i]);

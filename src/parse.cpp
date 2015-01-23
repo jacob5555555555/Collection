@@ -46,9 +46,9 @@ ObjRef parse(std::vector<std::string>::iterator begin, std::vector<std::string>:
                     --depth;
                 }
             }
-            subExpEnd += 1; //one after ")"
-            objl.push_back(parse(begin, subExpEnd));
-            begin = subExpEnd;
+            //from after "(" tp ")"
+            objl.push_back(parse(begin + 1, subExpEnd));
+            begin = subExpEnd + 1;
         } else {
             ObjRef next(nullptr);
             next = asNum(*begin);

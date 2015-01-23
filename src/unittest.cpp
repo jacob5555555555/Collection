@@ -194,13 +194,12 @@ SUITE(parsing){
         vector<string> stringVec{"9.9", "+", "-45"};
         ObjRef gotten1 = parse(stringVec.begin(), stringVec.end());
 
-        cout << "gotten: " << gotten1->toString() << endl;
-
         CHECK(expected1 == gotten1);
     }
     TEST(parseString){
-        cout << "value: " << parseString("1 + 5 - 2")->toString() << endl;
         CHECK(parseString("1 + 5 - 2")->evaluate() == ObjRef(new NumberObject(4)));
+        cout << parseString("1 + ( 3 * 9 )")->evaluate()->toString() << endl;
+        CHECK(parseString("1 + ( 3 * 9 )")->evaluate() == ObjRef(new NumberObject(28)));
     }
 }
 
