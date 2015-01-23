@@ -40,7 +40,7 @@ ObjRef Expression::evaluate(){
     for (size_t i = 1; i < objList.size(); ++i){
         soFar = soFar->get(objList[i]->evaluate());
     }
-    return soFar;
+    return soFar->evaluate();
 }
 
 bool Expression::compare(const Object& other) const{
