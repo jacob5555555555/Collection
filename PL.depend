@@ -1,16 +1,8 @@
 # depslib dependency file v1.0
 18816928 <<<<<<< HEAD
 
-1422052961 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
+1422054489 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
 	<iostream>
-	<ArrayPiece.h>
-	<stdlib.h>
-	<string>
-	<Tokenizer.h>
-	<LazyCopyRef.h>
-	<SpecificObject.h>
-	<UserDefinedObject.h>
-	<Object.h>
 	<parse.h>
 
 1421372869 8cc74f11051cd9647a8511bfbbba436a612e1
@@ -3001,19 +2993,22 @@
 	<sstream>
 	<typeinfo>
 
-1422052695 source:/home/jacob/Desktop/simple-pl/PL/src/unittest.cpp
+1422074797 source:/home/jacob/Desktop/simple-pl/PL/src/unittest.cpp
 	<unittest++/UnitTest++.h>
-	<Tokenizer.h>
-	<LazyCopyRef.h>
-	<SpecificObject.h>
-	<UserDefinedObject.h>
 	<string>
-	<SymbolObject.h>
-	<NumberObject.h>
-	<FunctorObject.h>
-	<NoneObject.h>
-	<Expression.h>
-	<parse.h>
+	<streambuf>
+	<istream>
+	<fstream>
+	<iostream>
+	"Parsing/Tokenizer.h"
+	"Objects/SpecificObject.h"
+	"Objects/UserDefinedObject.h"
+	"Objects/SymbolObject.h"
+	"Objects/NumberObject.h"
+	"Objects/FunctorObject.h"
+	"Objects/NoneObject.h"
+	"Objects/Expression.h"
+	"parse.h"
 
 1249328246 /usr/include//unittest++/UnitTest++.h
 	"Config.h"
@@ -3188,7 +3183,7 @@
 	<vector>
 	<Object.h>
 
-1422054465 source:/home/jacob/Desktop/simple-pl/PL/src/parse.cpp
+1422071719 source:/home/jacob/Desktop/simple-pl/PL/src/parse.cpp
 	"parse.h"
 	<iostream>
 	<algorithm>
@@ -3198,7 +3193,7 @@
 	"Objects/SymbolObject.h"
 	"Objects/NoneObject.h"
 
-1422054384 /home/jacob/Desktop/simple-pl/PL/include/parse.h
+1422071724 /home/jacob/Desktop/simple-pl/PL/include/parse.h
 	<string>
 	<vector>
 	"Objects/Object.h"
@@ -3217,7 +3212,7 @@
 	<utility>
 	<iostream>
 
-1422054041 source:/home/jacob/Desktop/simple-pl/PL/src/Objects/Expression.cpp
+1422055150 source:/home/jacob/Desktop/simple-pl/PL/src/Objects/Expression.cpp
 	"Objects/Expression.h"
 	"Objects/NoneObject.h"
 	"Objects/ObjRef.h"
@@ -3242,7 +3237,7 @@
 	"Objects/NumberObject.h"
 	"Objects/ObjRef.h"
 
-1422054294 source:/home/jacob/Desktop/simple-pl/PL/src/Objects/ObjRef.cpp
+1422073330 source:/home/jacob/Desktop/simple-pl/PL/src/Objects/ObjRef.cpp
 	"Objects/ObjRef.h"
 	<utility>
 	<iostream>
@@ -3266,7 +3261,7 @@
 	"ObjRef.h"
 	"Hash.h"
 
-1422052503 /home/jacob/Desktop/simple-pl/PL/include/Objects/ObjRef.h
+1422073306 /home/jacob/Desktop/simple-pl/PL/include/Objects/ObjRef.h
 	<utility>
 	<functional>
 	"Hash.h"
@@ -3290,4 +3285,26 @@
 	<vector>
 	<unordered_map>
 	"Objects/Object.h"
+
+1422074945 source:/home/jacob/Desktop/simple-pl/PL/src/Parsing/Tokenizer.cpp
+	"Parsing/Tokenizer.h"
+	<iostream>
+	<string>
+	"Objects/NumberObject.h"
+	"Objects/SymbolObject.h"
+	<iostream>
+
+1422072544 /home/jacob/Desktop/simple-pl/PL/include/Parsing/Tokenizer.h
+	<unordered_map>
+	<istream>
+	<iterator>
+	<string>
+	"Objects/Object.h"
+	"Objects/ObjRef.h"
+
+1422054605 /home/jacob/Desktop/simple-pl/PL/include/Objects/SpecificObject.h
+	<sstream>
+	<typeinfo>
+	"Objects/Object.h"
+	"Objects/NoneObject.h"
 

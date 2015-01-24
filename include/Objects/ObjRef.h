@@ -31,6 +31,9 @@ public:
     //swaps with another ObjRef<T>
     void swap(ObjRef other);
     Hash hash() const;
+
+    //
+    bool isNull();
 private:
     Object* ptr;
 };

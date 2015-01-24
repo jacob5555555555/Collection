@@ -8,6 +8,4 @@
 
 ObjRef parse(std::vector<std::string>::iterator begin, std::vector<std::string>::iterator end);
 
-ObjRef parseString(std::string str);
-
 #endif // PARSE_H_INCLUDED

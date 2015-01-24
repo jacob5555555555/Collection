@@ -74,3 +74,7 @@ ObjRef::~ObjRef()
         }
     }
 }
+
+bool ObjRef::isNull(){
+    return ptr == nullptr;
+}
