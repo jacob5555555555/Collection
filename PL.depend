@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
 18816928 <<<<<<< HEAD
 
-1422054489 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
+1422158205 source:/home/jacob/Desktop/simple-pl/PL/test.cpp
 	<iostream>
-	<parse.h>
+	<Parsing/Parser.h>
 
 1421372869 8cc74f11051cd9647a8511bfbbba436a612e1
 	<iostream>
@@ -3307,4 +3307,22 @@
 	<typeinfo>
 	"Objects/Object.h"
 	"Objects/NoneObject.h"
+
+1422158122 source:/home/jacob/Desktop/simple-pl/PL/src/Parsing/Parser.cpp
+	"Parsing/Parser.h"
+	<string>
+	<vector>
+	<iostream>
+	"Objects/ObjRef.h"
+	"Objects/Expression.h"
+	"Objects/NumberObject.h"
+	"Objects/SymbolObject.h"
+
+1422156919 /home/jacob/Desktop/simple-pl/PL/include/Parsing/Parser.h
+	<unordered_map>
+	<istream>
+	<iterator>
+	<string>
+	"Objects/Object.h"
+	"Objects/ObjRef.h"
 

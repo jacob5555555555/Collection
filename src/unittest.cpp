@@ -6,7 +6,7 @@
 #include <fstream>
 #include <iostream>
 
-#include "Parsing/Tokenizer.h"
+#include "Parsing/Parser.h"
 #include "Objects/SpecificObject.h"
 #include "Objects/UserDefinedObject.h"
 #include "Objects/SymbolObject.h"
@@ -181,7 +181,7 @@ SUITE(evaluate){
 }
 
 
-SUITE(Tokenizer){
+SUITE(Parser){
     TEST(Tokenize){
           std::filebuf fb;
           if (fb.open ("Test/test.txt", std::ios::in))
@@ -189,18 +189,14 @@ SUITE(Tokenizer){
             std::istream is(&fb);
 
 
-            Tokenizer tok1(is);
-            ObjRef o1 = tok1.next();
-            ObjRef o2 = tok1.next();
-            CHECK(!tok1.eof());
-            ObjRef o3 = tok1.next();
-            CHECK(tok1.eof());
+            Parser tok1(is);
+            ObjRef exp = tok1.parse();
 
-            CHECK(ObjRef(new NumberObject(5)) == o1);
-            CHECK(ObjRef(new SymbolObject("+")) == o2);
-            CHECK(ObjRef(new NumberObject(7)) == o3);
+            cout << exp->toString() << endl;
 
+            ObjRef expected(new Expression({ObjRef(new NumberObject(5)), ObjRef(new SymbolObject("+")), ObjRef(new NumberObject(7))}));
 
+            CHECK(exp == expected);
 
             fb.close();
           } else {
